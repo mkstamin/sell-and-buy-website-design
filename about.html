@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>All Products</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <!--           /*main_menu start*/-->
+        <div id="main_menu">
+            <nav class="navbar navbar-inverse text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header" >
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                <img src="images/logo.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">সকল বিজ্ঞাপন</a></li>
+                            </ul>
+                            <div class="navbar-right">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#chat_modal" data-toggle="modal"><i class="fa fa-comments-o"></i></a></li>
+                                    <li><a  href="#sineup_modal" data-toggle="modal" ><i class="fa fa-user"></i> লগ ইন</a></li>
+                                </ul>
+                                <button class="btn btn-danger navbar-btn">আপনার বিজ্ঞাপন পোস্ট করুন</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--   /*main_menu end*/-->
+
+        <!--body menu start-->
+        <div id="body_menu">
+            <div class="container">
+                <div class="row well">
+                    <div class="col-md-12">
+                        <form class="form-inline" action="">
+                            <div class="col-md-3 menu_col">
+                                <button type="button" class="btn btn-default btn-block"  data-toggle="modal" data-target="#location_modal">
+                                    <i class="fa fa-location-arrow"></i>
+                                    অবস্থান নির্বাচন করুন</button>
+                            </div>
+                            <div class="col-md-3 menu_col">
+                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#category_modal">
+                                    <i class="fa fa-tag"></i>
+                                    শ্রেণী নির্বাচন করুন</button>
+                            </div>
+                            <div class=" col-md-6 menu_col">
+                                <div class="input-group btn-block">
+                                    <input type="text" class="form-control" placeholder="আপনি কী খুঁজছেন?" name="search">
+                                    <div class="input-group-btn ">
+                                        <button class="btn btn-default btn-block" type="submit">
+                                            <i class="fa fa-search"></i>অনুসন্ধান
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--body menu end-->
+
+
+
+
+        <!--  location_modal   modal end here-->
+        <div class="container" id="location">
+            <div class="row">
+                <!-- Modal -->
+                <div class="modal fade" id="location_modal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <div class="col-md-10 col-md-offset-1">
+                                    <h3>আপনি কোথায় আছেন?</h3><hr/>
+                                    <div class="col-md-6">
+                                        <h3>শহর বা বিভাগ নির্বাচন করুন</h3>
+                                        <p>শহর</p>
+                                        <ul>
+                                            <li><a href="#dhaka" data-toggle="pill">ঢাকা<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#chittagong" data-toggle="pill">চট্টগ্রাম<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#sylhat" data-toggle="pill">সিলেট<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#khulna" data-toggle="pill">খুলনা<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#borishal" data-toggle="pill">বরিশাল<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#rajshahi" data-toggle="pill">রাজশাহী<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#rangpur" data-toggle="pill">রংপুর<i class="fa fa-angle-right"></i></a>
+                                        </ul>
+                                        <p>বিভাগ</p>
+                                        <ul>
+                                            <li><a href="#dhaka" data-toggle="pill">ঢাকা বিভাগ<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#chittagong_div" data-toggle="pill">চট্টগ্রাম বিভাগ<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#sylhat_div" data-toggle="pill">সিলেট বিভাগ<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#khulna_div" data-toggle="pill">খুলনা বিভাগ<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#rajshahi_div" data-toggle="pill">রাজশাহী বিভাগ<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#rangpur_div" data-toggle="pill">রংপুর বিভাগ<i class="fa fa-angle-right"></i></a>
+                                            <li><a href="#borishal_div" data-toggle="pill">বরিশাল বিভাগ<i class="fa fa-angle-right"></i></a>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="tab-content">
+                                            <div id="dhaka" class="tab-pane fade">
+                                                <h3>ঢাকা এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">মিরপুর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">উত্তরা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ধানমন্ডি<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">গুলশান<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">মোহাম্মদপুর<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div id="chittagong" class="tab-pane fade">
+                                                <h3>চট্টগ্রাম এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">আগ্রাবাদ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">চকবাজার<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">হালিশহর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নাসিরাবাদ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">কোতয়ালী<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="sylhat" class="tab-pane fade">
+                                                <h3>সিলেট এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">জিন্দা বাজার<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">বন্দর বাজার<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">আম্বরখানা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">সাউথ সুরমা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">উপশহর<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="khulna" class="tab-pane fade">
+                                                <h3>খুলনা এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">খুলনা সদর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">সোনাডাংগা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">খালিশপুর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">দৌলতপুর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">খান জাহান আলি<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="borishal" class="tab-pane fade">
+                                                <h3>বরিশাল  এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">সদর রোড<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নথুল্লাবাদ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">রুপাতলি<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নথুল্লাবাদ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নবগ্রাম রোড<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="rajshahi" class="tab-pane fade">
+                                                <h3>রাজশাহী   এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">সাহেববাজার<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">মতিহার<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">লক্ষ্মীপুর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">উপশহর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">কাজলা<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="rangpur" class="tab-pane fade">
+                                                <h3>রংপুর  এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">জাহাজ কোম্পানি মোড়<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ধাপ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">শাপলা চত্বর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">লালবাগ মোড়<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">সাত মাথা চত্বর<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+
+
+
+                                            <div id="dhaka_div" class="tab-pane fade">
+                                                <h3>ঢাকা বিভাগ এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">গাজীপুর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নারায়নগঞ্জ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ময়মনসিংহ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">টাঙ্গাইল<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নরসিংদী<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div id="chittagong_div" class="tab-pane fade">
+                                                <h3>চট্টগ্রাম বিভাগ এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">কুমিল্লা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নোয়াখালী<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ফেনী<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ব্রাহ্মণবাড়িয়া<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">চাঁদপুর<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="sylhat_div" class="tab-pane fade">
+                                                <h3>সিলেট বিভাগ এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">মৌলভী বাজার<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">হবিগঞ্জ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">সুনামগঞ্জ<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="khulna_div" class="tab-pane fade">
+                                                <h3>খুলনা বিভাগ এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">যশোর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">কুষ্টিয়া<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ঝিনাইদাহ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">সাতক্ষীরা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">বাগেরহাট<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="borishal_div" class="tab-pane fade">
+                                                <h3>বরিশাল বিভাগ এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">পটুয়াখালী<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ভোলা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">পিরোজপুর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">বরগুনা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ঝালকাঠি<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="rajshahi_div" class="tab-pane fade">
+                                                <h3>রাজশাহী বিভাগ এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">পাবনা<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">বগুড়া<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নাটোর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">সিরাজগঞ্জ<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নওগাঁ<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="rangpur_div" class="tab-pane fade">
+                                                <h3>রংপুর বিভাগ এর মধ্যে একটি স্থানীয় এলাকা নির্বাচন করুন</h3>
+                                                <p>জনপ্রিয় এলাকাসমূহ</p>
+                                                <ul>
+                                                    <li><a href="">দিনাজপুর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">কুড়িগ্রাম<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">ঠাকুরগাঁওর<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">নীলফামারী<i class="fa fa-angle-right"></i></a></li>
+                                                    <li><a href="">গাইবান্ধার<i class="fa fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  location_modal   modal end here-->
+
+
+
+        <!-- category_modal    modal end here-->
+        <div class="container" id="category">
+            <div class="row">
+                <!-- Modal -->
+                <div class="modal fade" id="category_modal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <div class="col-md-10 col-md-offset-1 ">
+                                    <div class="">
+                                        <h3>কোনো পণ্য বা সেবা বিক্রি করুন</h3><hr/>
+
+                                        <div class="col-md-6">
+                                            <h3>একটি শ্রেণী নির্বাচন করুন...</h3>
+                                            <ul>
+                                                <li><a href="#menu" data-toggle="pill"><span class=""></span>ইলেকট্রনিক্স<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu1" data-toggle="pill"><span class=""></span>গাড়ি ও অন্যান্য যানবাহন<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu2" data-toggle="pill"><span class=""></span>প্রপার্টি<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu3" data-toggle="pill"><span class=""></span>সার্ভিস<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu4" data-toggle="pill"><span class=""></span>ঘর ও বাগানের সামগ্রী<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu5" data-toggle="pill"><span class=""></span>পোশাক, স্বাস্থ্য ও সৌন্দর্য্য<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu6" data-toggle="pill"><span class=""></span>শখ, খেলাধুলা এবং শিশু<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu7" data-toggle="pill"><span class=""></span>ব্যবসা ও শিল্পকারখানা<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu8" data-toggle="pill"><span class=""></span>শিক্ষা<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu9" data-toggle="pill"><span class=""></span>পোষা প্রাণী ও জীবজন্তু<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu10" data-toggle="pill"><span class=""></span>কৃষি এবং খাদ্যদ্রব্য<i class="fa fa-angle-right"></i></a>
+                                                <li><a href="#menu11" data-toggle="pill"><span class=""></span>অন্যান্য<i class="fa fa-angle-right"></i></a>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tab-content">
+                                                <div id="menu" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন... </h3>
+                                                    <ul>
+                                                        <li><a href="">মোবাইল ফোন<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">মোবাইল ফোন এক্সেসরিজ<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">কম্পিউটার এবং ট্যাবলেট<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">টিভি ও ভিডিওর আনুষঙ্গিক যন্ত্রপাতি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ক্যামেরা ও ভিডিও ক্যামেরা<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ভিডিও গেম ও কনসোল<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অন্যান্য ইলেকট্রনিক্স<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div id="menu1" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">গাড়ি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">মোটরবাইক ও স্কুটার<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">সিএনজি ও সাইকেল<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">বাস, ট্রাক ও ভ্যান<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ট্র্যাক্টর এবং হেভি-ডিউটি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অটো পার্টস ও এক্সেসরিজ<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">নৌকা ও জল পরিবহন<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অটো সার্ভিস<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu2" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">ফ্ল্যাট ও এ্যাপার্টমেন্ট<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">নতুন ডেভেলপমেন্ট<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">বাড়ি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">প্লট ও জমি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">গ্যারেজ<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">কমার্শিয়াল স্পেস<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu3" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">ব্যবসা ও কারিগরি সার্ভিস<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ভ্রমণ ও ভিসা<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">টিকেট<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ইভেন্ট ও আতিথেয়তা<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">পারিবারিক ও ব্যক্তিগত<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">স্বাস্থ্য ও লাইফস্টাইল<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu4" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">আসবাবপত্র<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ঘরের দ্রব্যসামগ্রী<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">বিদ্যুৎ, এসি, বাথরুম এবং বাগান<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ঘরের অন্যান্য জিনিসপত্র<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu5" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">পোশাক<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">জুতা - স্যান্ডেল<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">জুয়েলারী<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অপটিক্যাল আইটেম<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ঘড়ি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অন্যান্য ফ্যাশনের সামগ্রী<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">স্বাস্থ্য ও সৌন্দর্য পণ্য<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অন্যান্য ব্যক্তিগত সামগ্রী<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu6" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">বাদ্যযন্ত্র<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">খেলার সামগ্রী<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">হস্তশিল্প এবং সাজসজ্জা<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">প্রাচীন জিনিসপত্র, শিল্প ও সংগ্রহ<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">সঙ্গীত, বই এবং চলচ্চিত্র<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">বাচ্চাদের জামাকাপড় ও খেলনা<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">শখ, খেলাধুলা এবং শিশুদের অন্যান্য পণ্য<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu7" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href=""> অফিস সরবরাহ এবং ষ্টেশনারী<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href=""> কারখানার মেশিন ও যন্ত্রপাতি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">   কাঁচামাল এবং কারখানার সরবরাহ<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">  লাইসেন্স, মালিকানা এবং দরপত্র<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href=""> মেডিকেল সরঞ্জাম ও সরবরাহ<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu8" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">পাঠ্য বই<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">টিউশন<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">বিদেশে শিক্ষা<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অন্যান্য শিক্ষা<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>  
+                                                <div id="menu9" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">পোষা প্রাণী<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">গবাদি পশু<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">পোষা প্রাণীর বিভিন্ন উপকরণ<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অন্যান্য পোষা প্রাণী ও জীবজন্তু<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div> 
+                                                <div id="menu10" class="tab-pane fade">
+                                                    <h3>উপশ্রেণী নির্বাচন করুন...</h3>
+                                                    <ul>
+                                                        <li><a href="">খাদ্যদ্রব্য<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">ফসল, বীজ এবং গাছ-গাছালি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">খামারের যন্ত্রপাতি<i class="fa fa-angle-right"></i></a></li>
+                                                        <li><a href="">অন্যান্য কৃষি এবং খাদ্যদ্রব্য<i class="fa fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="menu11" class="tab-pane fade">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  category_modal   modal end here-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Add start-->
+        <div class="container products">
+            <div class="row">
+                <div class="col-md-12 text-center" id="adds">
+                    <div>
+                        <h2>বিক্রি করার জন্য আপনার কি কিছু আছে?</h2>
+                        <h4>Ghoreyboshe.com--এ আপনার বিজ্ঞাপন পোস্ট করুন।</h4>
+                        <i class="fa fa-hand-o-down"></i>
+                    </div>
+                    <button class="btn btn-danger btn-lg">এখনই বিজ্ঞাপন পোস্ট করুন!</button>
+                </div>
+            </div>
+        </div>
+        <!--add end-->
+
+
+
+
+        <!--footer start-->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>আমাদের অ্যাপ ডাউনলোড করুন...</h4>
+                        <a href="#"><img src="images/GooglePlay.png" alt=""/></a>
+                        <a href="#"><img src="images/appstores.png" alt=""/></a>
+                        <h4>আমাদের সাথে যুক্ত থাকুন</h4>
+                        <a href="#">
+                            <i class="fa fa-facebook-official"></i>
+                            আমাদের ফেসবুক পেইজকে লাইক করুন
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>আরও জানুন</h4>
+                        <a href="">দ্রুত বিক্রি করুন</a><br>
+                        <a href="">মেম্বারশিপ</a><br>
+                        <a href="">ব্যানার বিজ্ঞাপন</a><br>
+                        <a href="">বিজ্ঞাপন প্রচার করুন</a>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>হেল্প ও সাপোর্ট</h4>
+                        <a href="">প্রশ্ন-উত্তর</a><br>
+                        <a href="">Ghoreyboshe.com-এ নিরাপদ </a><br>
+                        <a href="">থাকুন</a><br>
+                        <a href="">আমাদের সাথে </a>
+                        <a href="">যোগাযোগ </a>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>সামাজিক</h4>
+                        <a href="">ব্লগ</a><br>
+                        <a href="">ফেইসবুক</a><br>
+                        <a href="">টুইটার</a><br>
+                        <a href="">ইউটিউব</a><br>
+                        <a href="">Google+</a>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>আমাদের কথা</h4>
+                        <a href="">আমাদের কথা</a><br>
+                        <a href="">পেশা</a><br>
+                        <a href="">শর্তাবলী এবং নীতিমালা</a><br>
+                        <a href="">গোপনীয়তার নীতিমালা</a>
+                        <a href="">সাইটম্যাপ</a>
+
+                    </div>
+                </div><hr/>
+                <h5 class="text-center">Copyright © Mks Tamin</h5>
+            </div>
+        </div>
+        <!--footer end-->
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        <script src="js/ajax.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script> 
+    </body>
+</html>
